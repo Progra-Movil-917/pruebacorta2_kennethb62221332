@@ -32,3 +32,8 @@ Future<void> UpdateData(String uid, String newData)async{
   await fbdb.collection('entes').doc(uid).set({"prueba": newData});
 
 }
+
+//Delete
+Future<void> DeleteData(String uid) async {
+  await fbdb.collection('entes').doc(uid).delete();
+}
